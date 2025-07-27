@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "pattern": [
+    "C"
+  ],
+  "key": {
+    "C": {
+      "item": "thecursedmod:fredbear_plush"
+    }
+  },
+  "ingredients": [
+    {
+      "item": "thecursedmod:fredbear_plush"
+    },
+    {
+      "item": "thecursedmod:fredbear_plush"
+    }
+  ],
+  "result": {
+    "id": "thecursedmod:crying_child"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "C",
+    "F"
+  ],
+  "key": {
+    "C": {
+      "item": "thecursedmod:fredbear_plush"
+    },
+    "F": {
+      "item": "thecursedmod:crying_child"
+    }
+  },
+  "result": {
+    "id": "thecursedmod:fredbear_block",
+    "count": 1
+  }
+}

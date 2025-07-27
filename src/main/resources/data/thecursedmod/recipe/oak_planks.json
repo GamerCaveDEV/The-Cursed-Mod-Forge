@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F"
+  ],
+  "key": {
+    "F": {
+      "item": "thecursedmod:fredbear_plush"
+    }
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:oak_planks"
+    },
+    {
+      "item": ""
+    }
+  ],
+  "result": {
+    "id": "minecraft:oak_planks",
+    "count": 3
+  }
+}
