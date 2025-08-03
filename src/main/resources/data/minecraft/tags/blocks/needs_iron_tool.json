@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "thecursedmod:cursed_block",
+    "thecursedmod:cursed_ore",
+    "thecursedmod:fredbear_block",
+    "thecursedmod:fredbear_ore"
+  ]
+}

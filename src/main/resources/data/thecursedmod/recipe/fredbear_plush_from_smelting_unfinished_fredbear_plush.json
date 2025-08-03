@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "ingredient": {
+    "item": "thecursedmod:unfinished_fredbear_plush"
+  },
+  "result": {
+    "id": "thecursedmod:fredbear_plush"
+  },
+  "experience": 900000000,
+  "cookingtime": 1
+}

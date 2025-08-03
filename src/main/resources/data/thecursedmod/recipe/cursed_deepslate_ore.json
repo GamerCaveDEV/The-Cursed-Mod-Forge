@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S",
+    "S",
+    "S"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "result": {
+    "id": "thecursedmod:cursed_deepslate_ore",
+    "count": 15
+  }
+}

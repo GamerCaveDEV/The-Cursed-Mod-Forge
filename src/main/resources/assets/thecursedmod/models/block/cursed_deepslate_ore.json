@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "thecursedmod:block/cursed_deepslate_ore"
+  }
+}

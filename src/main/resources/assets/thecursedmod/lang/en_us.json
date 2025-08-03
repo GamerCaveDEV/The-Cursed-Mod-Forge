@@ -1,12 +1,18 @@
 {
   "item.thecursedmod.cursed_item": "Cursed Item",
+  "item.thecursedmod.raw_cursed_item": "Raw Cursed Item",
   "item.thecursedmod.fredbear_plush": "FredBear Plush",
+  "item.thecursedmod.unfinished_fredbear_plush": "Unfinished Fredbear Plush",
   "item.thecursedmod.crying_child": "Crying Child",
 
   "item.thecursedmod.cursed_mode": "Cursed Mode",
 
   "block.thecursedmod.cursed_block": "Cursed Block",
+  "block.thecursedmod.cursed_ore": "Cursed Ore",
+  "block.thecursedmod.cursed_deepslate_ore": "Cursed Deepslate Ore",
   "block.thecursedmod.fredbear_block": "Fredbear Block",
+  "block.thecursedmod.fredbear_ore": "Fredbear Ore",
+  "block.thecursedmod.fredbear_deepslate_ore": "Fredbear Deepslate Ore",
 
   "creativetab.thecursedmod.cursed_mod": "The Cursed Mod"
 }

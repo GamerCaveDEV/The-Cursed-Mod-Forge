@@ -20,11 +20,17 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.thecursedmod.cursed_mod"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.CURSED_ITEM.get());
+                        output.accept(ModItems.RAW_CURSED_ITEM.get());
                         output.accept(ModItems.FREDBEAR_PLUSH.get());
+                        output.accept(ModItems.UNFINISHED_FREDBEAR_PLUSH.get());
                         output.accept(ModItems.CRYING_CHILD.get());
 
                         output.accept(ModBlocks.CURSED_BLOCK.get());
+                        output.accept(ModBlocks.CURSED_ORE.get());
+                        output.accept(ModBlocks.CURSED_DEEPSLATE_ORE.get());
                         output.accept(ModBlocks.FREDBEAR_BLOCK.get());
+                        output.accept(ModBlocks.FREDBEAR_ORE.get());
+                        output.accept(ModBlocks.FREDBEAR_DEEPSLATE_ORE.get());
                     })
 
 

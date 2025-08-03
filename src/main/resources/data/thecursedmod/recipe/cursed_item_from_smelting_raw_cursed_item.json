@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "ingredient": {
+    "item": "thecursedmod:raw_cursed_item"
+  },
+  "result": {
+    "id": "thecursedmod:cursed_item"
+  },
+  "experience": 50000000,
+  "cookingtime": 1
+}

@@ -60,10 +60,16 @@ public class TheCursedMod
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.FREDBEAR_PLUSH);
             event.accept(ModItems.CRYING_CHILD);
+            event.accept(ModItems.UNFINISHED_FREDBEAR_PLUSH);
+            event.accept(ModItems.RAW_CURSED_ITEM);
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.CURSED_BLOCK);
+            event.accept(ModBlocks.CURSED_ORE);
+            event.accept(ModBlocks.CURSED_DEEPSLATE_ORE);
             event.accept(ModBlocks.FREDBEAR_BLOCK);
+            event.accept(ModBlocks.FREDBEAR_ORE);
+            event.accept(ModBlocks.FREDBEAR_DEEPSLATE_ORE);
         }
     }
 

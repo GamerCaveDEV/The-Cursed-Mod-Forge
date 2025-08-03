@@ -14,7 +14,13 @@ public class ModItems {
     public static final RegistryObject<Item> CURSED_ITEM = ITEMS.register("cursed_item",
              () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> RAW_CURSED_ITEM = ITEMS.register("raw_cursed_item",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> FREDBEAR_PLUSH = ITEMS.register("fredbear_plush",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> UNFINISHED_FREDBEAR_PLUSH = ITEMS.register("unfinished_fredbear_plush",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> CRYING_CHILD = ITEMS.register("crying_child",
