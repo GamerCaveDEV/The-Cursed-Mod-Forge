@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.gamercave.thecursedmod.block.ModBlocks;
 import net.gamercave.thecursedmod.item.ModCreativeModeTabs;
 import net.gamercave.thecursedmod.item.ModItems;
+import net.gamercave.thecursedmod.item.custom.ForgerItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -62,6 +63,10 @@ public class TheCursedMod
             event.accept(ModItems.CRYING_CHILD);
             event.accept(ModItems.UNFINISHED_FREDBEAR_PLUSH);
             event.accept(ModItems.RAW_CURSED_ITEM);
+            event.accept(ModItems.FORGER);
+            event.accept(ModItems.GOLDMAKER);
+
+
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.CURSED_BLOCK);

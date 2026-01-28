@@ -1,6 +1,8 @@
 package net.gamercave.thecursedmod.item;
 
 import net.gamercave.thecursedmod.TheCursedMod;
+import net.gamercave.thecursedmod.item.custom.ForgerItem;
+import net.gamercave.thecursedmod.item.custom.GoldMakerItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -25,6 +27,13 @@ public class ModItems {
 
     public static final RegistryObject<Item> CRYING_CHILD = ITEMS.register("crying_child",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> FORGER = ITEMS.register("forger",
+            () -> new ForgerItem(new Item.Properties().durability(300)));
+
+    public static final RegistryObject<Item> GOLDMAKER = ITEMS.register("goldmaker",
+            () -> new GoldMakerItem(new Item.Properties().durability(200)));
+
 
     public static final RegistryObject<Item> CURSED_MODE = ITEMS.register("cursed_mode",
             () -> new Item(new Item.Properties()));

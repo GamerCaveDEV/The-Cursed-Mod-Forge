@@ -4,6 +4,8 @@
   "item.thecursedmod.fredbear_plush": "FredBear Plush",
   "item.thecursedmod.unfinished_fredbear_plush": "Unfinished Fredbear Plush",
   "item.thecursedmod.crying_child": "Crying Child",
+  "item.thecursedmod.forger": "Forger",
+  "item.thecursedmod.goldmaker": "The Gold Maker",
 
   "item.thecursedmod.cursed_mode": "Cursed Mode",
 
@@ -13,6 +15,7 @@
   "block.thecursedmod.fredbear_block": "Fredbear Block",
   "block.thecursedmod.fredbear_ore": "Fredbear Ore",
   "block.thecursedmod.fredbear_deepslate_ore": "Fredbear Deepslate Ore",
+
 
   "creativetab.thecursedmod.cursed_mod": "The Cursed Mod"
 }
