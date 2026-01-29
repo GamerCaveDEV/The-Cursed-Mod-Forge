@@ -31,19 +31,19 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> CURSED_ORE = registerBlock("cursed_ore",
             () -> new DropExperienceBlock(UniformInt.of(9999, 99999), BlockBehaviour.Properties.of()
-                    .strength(4f).destroyTime(3).sound(SoundType.STONE)));
+                    .strength(4f).destroyTime(3).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> CURSED_DEEPSLATE_ORE = registerBlock("cursed_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(999999999, 999999999), BlockBehaviour.Properties.of()
-                    .strength(5f).destroyTime(3).sound(SoundType.STONE)));
+                    .strength(5f).destroyTime(3).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> FREDBEAR_ORE = registerBlock("fredbear_ore",
             () -> new DropExperienceBlock(UniformInt.of(99999, 99999), BlockBehaviour.Properties.of()
-                    .strength(4f).destroyTime(3).sound(SoundType.DEEPSLATE)));
+                    .strength(4f).destroyTime(3).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
     public static final RegistryObject<Block> FREDBEAR_DEEPSLATE_ORE = registerBlock("fredbear_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(999999999, 999999999), BlockBehaviour.Properties.of()
-                    .strength(5f).destroyTime(3).sound(SoundType.DEEPSLATE)));
+                    .strength(5f).destroyTime(3).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
 
 
