@@ -1,6 +1,6 @@
-{
+ {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "thecursedmod:block/cursed_block"
+    "all": "thecursedmod:block/transformer_block"
   }
 }

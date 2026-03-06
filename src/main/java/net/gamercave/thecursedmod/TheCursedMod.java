@@ -65,6 +65,7 @@ public class TheCursedMod
             event.accept(ModItems.RAW_CURSED_ITEM);
             event.accept(ModItems.FORGER);
             event.accept(ModItems.GOLDMAKER);
+            event.accept(ModItems.SUPERSTAR);
 
 
         }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "thecursedmod:item/cursed_mode"
+    "layer0": "thecursedmod:item/the_superstar"
   }
 }

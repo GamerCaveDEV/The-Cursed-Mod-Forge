@@ -4,6 +4,7 @@
     "thecursedmod:cursed_block",
     "thecursedmod:cursed_ore",
     "thecursedmod:fredbear_block",
-    "thecursedmod:fredbear_ore"
+    "thecursedmod:fredbear_ore",
+    "thecursedmod:transformer_block"
   ]
 }

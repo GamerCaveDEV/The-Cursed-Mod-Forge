@@ -6,6 +6,7 @@
   "item.thecursedmod.crying_child": "Crying Child",
   "item.thecursedmod.forger": "Forger",
   "item.thecursedmod.goldmaker": "The Gold Maker",
+  "item.thecursedmod.the_superstar": "The Superstar",
 
   "item.thecursedmod.cursed_mode": "Cursed Mode",
 
@@ -15,7 +16,11 @@
   "block.thecursedmod.fredbear_block": "Fredbear Block",
   "block.thecursedmod.fredbear_ore": "Fredbear Ore",
   "block.thecursedmod.fredbear_deepslate_ore": "Fredbear Deepslate Ore",
+  "block.thecursedmod.transformer_block": "The Transformer Block",
 
 
-  "creativetab.thecursedmod.cursed_mod": "The Cursed Mod"
+  "creativetab.thecursedmod.cursed_mod": "The Cursed Mod",
+
+  "tooltip.thecursedmod.forger": "Right click the ground using me! I will do something special.",
+  "tooltip.thecursedmod.goldmaker": "Right click the ground using me! I will do something special."
 }

@@ -25,12 +25,16 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.UNFINISHED_FREDBEAR_PLUSH.get());
                         output.accept(ModItems.CRYING_CHILD.get());
                         output.accept(ModItems.FORGER.get());
+                        output.accept(ModItems.SUPERSTAR.get());
+
                         output.accept(ModItems.GOLDMAKER.get());
 
                         output.accept(ModBlocks.CURSED_BLOCK.get());
+                        output.accept(ModBlocks.TRANSFORMER_BLOCK.get());
                         output.accept(ModBlocks.CURSED_ORE.get());
                         output.accept(ModBlocks.CURSED_DEEPSLATE_ORE.get());
                         output.accept(ModBlocks.FREDBEAR_BLOCK.get());
+                        output.accept(ModBlocks.FREDBEAR_DEEPSLATE_ORE.get());
                         output.accept(ModBlocks.FREDBEAR_ORE.get());
                     })
 

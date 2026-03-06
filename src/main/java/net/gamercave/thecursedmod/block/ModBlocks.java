@@ -2,6 +2,7 @@ package net.gamercave.thecursedmod.block;
 
 
 import net.gamercave.thecursedmod.TheCursedMod;
+import net.gamercave.thecursedmod.block.custom.TransformerBlock;
 import net.gamercave.thecursedmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -44,6 +45,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> FREDBEAR_DEEPSLATE_ORE = registerBlock("fredbear_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(999999999, 999999999), BlockBehaviour.Properties.of()
                     .strength(5f).destroyTime(3).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final RegistryObject<Block> TRANSFORMER_BLOCK = registerBlock("transformer_block",
+        () -> new TransformerBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
+
+
 
 
 
