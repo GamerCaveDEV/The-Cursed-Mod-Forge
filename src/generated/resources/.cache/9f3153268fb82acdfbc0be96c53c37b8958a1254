@@ -1,0 +1,5 @@
+// 1.21.1	2026-04-12T17:31:56.9905734	Tags for minecraft:block mod id thecursedmod
+b2fc891427ca5bb71f51479aec9cdd4974292af9 data/minecraft/tags/block/mineable/pickaxe.json
+643b4e91a0fcc06671188265b251d54e5d178c8c data/minecraft/tags/block/needs_diamond_tool.json
+425ffb1fde44d2b4f2a55d953445baeb4bc69672 data/minecraft/tags/block/needs_iron_tool.json
+140e88d0d555a110048ac600abe8f38186e3fada data/minecraft/tags/block/needs_stone_tool.json

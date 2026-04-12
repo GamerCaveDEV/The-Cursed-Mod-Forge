@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "thecursedmod:block/fredbear_deepslate_ore"
+  }
+}

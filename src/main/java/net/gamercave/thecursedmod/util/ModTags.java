@@ -1,7 +1,6 @@
 package net.gamercave.thecursedmod.util;
 
 import net.gamercave.thecursedmod.TheCursedMod;
-import net.minecraft.ResourceLocationException;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;

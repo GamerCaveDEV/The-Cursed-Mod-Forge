@@ -2,13 +2,12 @@ package net.gamercave.thecursedmod.datagen;
 
 import net.gamercave.thecursedmod.block.ModBlocks;
 import net.gamercave.thecursedmod.item.ModItems;
-import net.gamercave.thecursedmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
-import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;

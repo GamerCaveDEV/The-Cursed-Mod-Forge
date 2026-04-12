@@ -11,42 +11,41 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
 public class ModBlocks {
-    public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, TheCursedMod.MOD_ID);
+    public static final DeferredRegister.Blocks BLOCKS =
+            DeferredRegister.createBlocks(TheCursedMod.MOD_ID);
 
-    public static final RegistryObject<Block> CURSED_BLOCK = registerBlock("cursed_block",
+    public static final DeferredBlock<Block> CURSED_BLOCK = registerBlock("cursed_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).destroyTime(3).sound(SoundType.ANVIL)));
 
-    public static final RegistryObject<Block> FREDBEAR_BLOCK = registerBlock("fredbear_block",
+    public static final DeferredBlock<Block> FREDBEAR_BLOCK = registerBlock("fredbear_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).destroyTime(6).sound(SoundType.ANVIL)));
 
-    public static final RegistryObject<Block> CURSED_ORE = registerBlock("cursed_ore",
+    public static final DeferredBlock<Block> CURSED_ORE = registerBlock("cursed_ore",
             () -> new DropExperienceBlock(UniformInt.of(9999, 99999), BlockBehaviour.Properties.of()
                     .strength(4f).destroyTime(3).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final RegistryObject<Block> CURSED_DEEPSLATE_ORE = registerBlock("cursed_deepslate_ore",
+    public static final DeferredBlock<Block> CURSED_DEEPSLATE_ORE = registerBlock("cursed_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(999999999, 999999999), BlockBehaviour.Properties.of()
                     .strength(5f).destroyTime(3).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final RegistryObject<Block> FREDBEAR_ORE = registerBlock("fredbear_ore",
+    public static final DeferredBlock<Block> FREDBEAR_ORE = registerBlock("fredbear_ore",
             () -> new DropExperienceBlock(UniformInt.of(99999, 99999), BlockBehaviour.Properties.of()
                     .strength(4f).destroyTime(3).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
-    public static final RegistryObject<Block> FREDBEAR_DEEPSLATE_ORE = registerBlock("fredbear_deepslate_ore",
+    public static final DeferredBlock<Block> FREDBEAR_DEEPSLATE_ORE = registerBlock("fredbear_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(999999999, 999999999), BlockBehaviour.Properties.of()
                     .strength(5f).destroyTime(3).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
-    public static final RegistryObject<Block> TRANSFORMER_BLOCK = registerBlock("transformer_block",
+    public static final DeferredBlock<Block> TRANSFORMER_BLOCK = registerBlock("transformer_block",
         () -> new TransformerBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
 
 
@@ -54,13 +53,13 @@ public class ModBlocks {
 
 
 
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
+        DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
     }
 
-    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
+    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 

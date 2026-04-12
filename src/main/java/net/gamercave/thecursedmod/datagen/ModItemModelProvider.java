@@ -3,8 +3,8 @@ package net.gamercave.thecursedmod.datagen;
 import net.gamercave.thecursedmod.TheCursedMod;
 import net.gamercave.thecursedmod.item.ModItems;
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class ModItemModelProvider extends ItemModelProvider {
 
@@ -22,5 +22,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.FORGER.get());
         basicItem(ModItems.GOLDMAKER.get());
         basicItem(ModItems.SUPERSTAR.get());
+        basicItem(ModItems.CURSED_MODE.get());
+        basicItem(ModItems.CRYING_CHILD.get());
     }
 }
