@@ -1,10 +1,10 @@
 package net.gamercave.thecursedmod;
 
 import com.mojang.logging.LogUtils;
-import net.gamercave.thecursedmod.block.ModBlocks;
-import net.gamercave.thecursedmod.datagen.DataGenerators;
-import net.gamercave.thecursedmod.item.ModCreativeModeTabs;
-import net.gamercave.thecursedmod.item.ModItems;
+import net.gamercave.thecursedmod.block.TheCursedModBlocks;
+import net.gamercave.thecursedmod.datagen.TheCursedModDataGenerators;
+import net.gamercave.thecursedmod.item.TheCursedModCreativeModeTabs;
+import net.gamercave.thecursedmod.item.TheCursedModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -32,17 +32,17 @@ public class TheCursedMod
         // Register ourselves for server and other game events we are interested in
         NeoForge.EVENT_BUS.register(this);
 
-        ModCreativeModeTabs.register(modEventBus);
+        TheCursedModCreativeModeTabs.register(modEventBus);
 
 
-        ModItems.register(modEventBus);
-        ModBlocks.register(modEventBus);
-        modEventBus.addListener(DataGenerators::gatherData);
+        TheCursedModItems.register(modEventBus);
+        TheCursedModBlocks.register(modEventBus);
+        modEventBus.addListener(TheCursedModDataGenerators::gatherData);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
-       modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+       modContainer.registerConfig(ModConfig.Type.COMMON, TheCursedModConfig.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -52,27 +52,27 @@ public class TheCursedMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.CURSED_ITEM);
-            event.accept(ModItems.CURSED_MODE);
+            event.accept(TheCursedModItems.CURSED_ITEM);
+            event.accept(TheCursedModItems.CURSED_MODE);
         }
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ModItems.FREDBEAR_PLUSH);
-            event.accept(ModItems.CRYING_CHILD);
-            event.accept(ModItems.UNFINISHED_FREDBEAR_PLUSH);
-            event.accept(ModItems.RAW_CURSED_ITEM);
-            event.accept(ModItems.FORGER);
-            event.accept(ModItems.GOLDMAKER);
-            event.accept(ModItems.SUPERSTAR);
+            event.accept(TheCursedModItems.FREDBEAR_PLUSH);
+            event.accept(TheCursedModItems.CRYING_CHILD);
+            event.accept(TheCursedModItems.UNFINISHED_FREDBEAR_PLUSH);
+            event.accept(TheCursedModItems.RAW_CURSED_ITEM);
+            event.accept(TheCursedModItems.FORGER);
+            event.accept(TheCursedModItems.GOLDMAKER);
+            event.accept(TheCursedModItems.SUPERSTAR);
 
 
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.CURSED_BLOCK);
-            event.accept(ModBlocks.CURSED_ORE);
-            event.accept(ModBlocks.CURSED_DEEPSLATE_ORE);
-            event.accept(ModBlocks.FREDBEAR_BLOCK);
-            event.accept(ModBlocks.FREDBEAR_ORE);
-            event.accept(ModBlocks.FREDBEAR_DEEPSLATE_ORE);
+            event.accept(TheCursedModBlocks.CURSED_BLOCK);
+            event.accept(TheCursedModBlocks.CURSED_ORE);
+            event.accept(TheCursedModBlocks.CURSED_DEEPSLATE_ORE);
+            event.accept(TheCursedModBlocks.FREDBEAR_BLOCK);
+            event.accept(TheCursedModBlocks.FREDBEAR_ORE);
+            event.accept(TheCursedModBlocks.FREDBEAR_DEEPSLATE_ORE);
         }
     }
 
