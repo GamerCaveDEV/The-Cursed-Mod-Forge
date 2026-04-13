@@ -1,23 +1,20 @@
 package net.gamercave.thecursedmod;
 
 import com.mojang.logging.LogUtils;
-import net.gamercave.thecursedmod.block.ModBlocks;
-import net.gamercave.thecursedmod.item.ModCreativeModeTabs;
-import net.gamercave.thecursedmod.item.ModItems;
-import net.gamercave.thecursedmod.item.custom.ForgerItem;
+import net.gamercave.thecursedmod.block.TheCursedModBlocks;
+import net.gamercave.thecursedmod.datagen.TheCursedModDataGenerators;
+import net.gamercave.thecursedmod.item.TheCursedModCreativeModeTabs;
+import net.gamercave.thecursedmod.item.TheCursedModItems;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.event.server.ServerStartingEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -29,23 +26,23 @@ public class TheCursedMod
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public TheCursedMod()
+    public TheCursedMod(IEventBus modEventBus, ModContainer modContainer)
     {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
         // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);
+        NeoForge.EVENT_BUS.register(this);
 
-        ModCreativeModeTabs.register(modEventBus);
+        TheCursedModCreativeModeTabs.register(modEventBus);
 
 
-        ModItems.register(modEventBus);
-        ModBlocks.register(modEventBus);
+        TheCursedModItems.register(modEventBus);
+        TheCursedModBlocks.register(modEventBus);
+        modEventBus.addListener(TheCursedModDataGenerators::gatherData);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+       modContainer.registerConfig(ModConfig.Type.COMMON, TheCursedModConfig.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -55,42 +52,33 @@ public class TheCursedMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.CURSED_ITEM);
-            event.accept(ModItems.CURSED_MODE);
+            event.accept(TheCursedModItems.CURSED_ITEM);
+            event.accept(TheCursedModItems.CURSED_MODE);
         }
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ModItems.FREDBEAR_PLUSH);
-            event.accept(ModItems.CRYING_CHILD);
-            event.accept(ModItems.UNFINISHED_FREDBEAR_PLUSH);
-            event.accept(ModItems.RAW_CURSED_ITEM);
-            event.accept(ModItems.FORGER);
-            event.accept(ModItems.GOLDMAKER);
-            event.accept(ModItems.SUPERSTAR);
+            event.accept(TheCursedModItems.FREDBEAR_PLUSH);
+            event.accept(TheCursedModItems.CRYING_CHILD);
+            event.accept(TheCursedModItems.UNFINISHED_FREDBEAR_PLUSH);
+            event.accept(TheCursedModItems.RAW_CURSED_ITEM);
+            event.accept(TheCursedModItems.FORGER);
+            event.accept(TheCursedModItems.GOLDMAKER);
+            event.accept(TheCursedModItems.SUPERSTAR);
 
 
         }
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.CURSED_BLOCK);
-            event.accept(ModBlocks.CURSED_ORE);
-            event.accept(ModBlocks.CURSED_DEEPSLATE_ORE);
-            event.accept(ModBlocks.FREDBEAR_BLOCK);
-            event.accept(ModBlocks.FREDBEAR_ORE);
-            event.accept(ModBlocks.FREDBEAR_DEEPSLATE_ORE);
+            event.accept(TheCursedModBlocks.CURSED_BLOCK);
+            event.accept(TheCursedModBlocks.CURSED_ORE);
+            event.accept(TheCursedModBlocks.CURSED_DEEPSLATE_ORE);
+            event.accept(TheCursedModBlocks.FREDBEAR_BLOCK);
+            event.accept(TheCursedModBlocks.FREDBEAR_ORE);
+            event.accept(TheCursedModBlocks.FREDBEAR_DEEPSLATE_ORE);
         }
     }
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-
-    }
-
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-
-        }
+        // Do something when the server starts
+        LOGGER.info("HELLO from server starting");
     }
 }

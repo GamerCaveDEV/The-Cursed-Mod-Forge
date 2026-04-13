@@ -1,0 +1,8 @@
+// 1.21.1	2026-04-12T17:31:56.991824	Loot Tables
+0dff5aca0ddd4ec2aa1af2bfb667f439a801d6e4 data/thecursedmod/loot_table/blocks/cursed_block.json
+a6979cd4aecff0735c40bc4cebcf442f1c280ff4 data/thecursedmod/loot_table/blocks/cursed_deepslate_ore.json
+8d6054873e8172e764e185822cfdd02399d9b012 data/thecursedmod/loot_table/blocks/cursed_ore.json
+e1ab23091a5099216e04900176f0d83221776ff0 data/thecursedmod/loot_table/blocks/fredbear_block.json
+0474fd0c77dd7c85bb3792bd291242cf894ae4f3 data/thecursedmod/loot_table/blocks/fredbear_deepslate_ore.json
+4fd2730f132e6523aa4d477ae377acb7e7d51560 data/thecursedmod/loot_table/blocks/fredbear_ore.json
+d182698b8ca889e308b18b984abcc593d1667026 data/thecursedmod/loot_table/blocks/transformer_block.json

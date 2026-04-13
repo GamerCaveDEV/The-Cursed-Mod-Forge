@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "thecursedmod:block/transformer_block"
+    }
+  }
+}

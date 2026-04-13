@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "thecursedmod:item/unfinished_fredbear_plush"
+  }
+}
